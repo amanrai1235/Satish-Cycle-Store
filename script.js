@@ -39,7 +39,7 @@ const data = [
             { name: "Chief", rt: 850, wp: 625 },
             { name: "Medium", rt: 1100, wp: 680 },
             { name: "Walker 1st", rt: 750, wp: 550 },
-            { name: "Walker 2nd", rt: 650, wp: 480 }
+            { name: "Waker 2nd", rt: 650, wp: 480 }
         ]
     }
 ];
