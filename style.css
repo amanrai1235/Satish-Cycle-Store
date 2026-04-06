@@ -77,15 +77,15 @@ input[type="number"] {
         width: 90%;
     }
 
-    table, thead, tbody, th, td, tr {
+    table {
+        width: 100%;
+    }
+
+    /* ❌ Remove old display:block for all */
+
+    /* ✅ Only rows block */
+    tbody tr {
         display: block;
-    }
-
-    thead {
-        display: none;
-    }
-
-    tr {
         background: white;
         margin-bottom: 10px;
         border-radius: 10px;
@@ -93,11 +93,17 @@ input[type="number"] {
         box-shadow: 0 5px 10px rgba(0,0,0,0.2);
     }
 
+    /* ❌ Hide header */
+    thead {
+        display: none;
+    }
+
     td {
-        text-align: left;
-        padding: 8px;
         display: flex;
         justify-content: space-between;
+        padding: 8px;
+        border: none;
+        border-bottom: 1px solid #eee;
     }
 
     td::before {
