@@ -1,14 +1,11 @@
 body {
-    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     margin: 0;
     padding: 0;
-
-    /* 🔥 Premium Gradient */
     background: linear-gradient(135deg, #1e3c72, #2a5298, #4facfe);
-    min-height: 100vh;
 }
 
-/* Center everything */
+/* Container */
 .container {
     text-align: center;
     padding: 20px;
@@ -17,90 +14,21 @@ body {
 /* Heading */
 h1 {
     color: white;
-    font-size: 34px;
-    margin-top: 20px;
-    text-align: center;
-    letter-spacing: 1px;
+    margin-bottom: 20px;
 }
 
-/* Search Box */
-input {
-    padding: 12px 18px;
-    width: 350px;
-    border-radius: 30px;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    margin: 20px auto;
-    display: block;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
-    transition: 0.3s;
-}
-
-input:focus {
-    transform: scale(1.05);
-}
-
-/* Table Card */
-table {
-    margin: 20px auto;
-    border-collapse: collapse;
-    width: 60%;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-}
-
-/* Header */
-th {
-    background: #2a5298;
-    color: white;
-    padding: 14px;
-    font-size: 18px;
-}
-
-/* Data */
-td {
+/* Search */
+input[type="text"] {
     padding: 12px;
-    border-bottom: 1px solid #eee;
+    width: 350px;
+    border-radius: 25px;
+    border: none;
+    margin-bottom: 20px;
 }
 
-/* Hover */
-tr:hover {
-    background-color: #eef5ff;
-    transform: scale(1.01);
-    transition: 0.2s;
-}
-
-/* Zebra */
-tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-/* 📱 Mobile Responsive */
-@media (max-width: 768px) {
-
-    h1 {
-        font-size: 24px;
-    }
-
-    input {
-        width: 85%;
-    }
-
-    table {
-        width: 95%;
-        font-size: 14px;
-    }
-
-    th, td {
-        padding: 10px;
-    }
-}
-/* Section Card */
+/* Card */
 .card {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255,255,255,0.95);
     margin: 20px auto;
     padding: 15px;
     width: 60%;
@@ -108,21 +36,75 @@ tr:nth-child(even) {
     box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
-/* Section Heading */
-.card h2 {
-    text-align: left;
-    margin-bottom: 10px;
-    color: #2a5298;
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-/* Responsive */
+/* Header */
+th {
+    background: #2a5298;
+    color: white;
+    padding: 12px;
+}
+
+/* Data */
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Input */
+input[type="number"] {
+    width: 70px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+/* 🔥 MOBILE VIEW */
 @media (max-width: 768px) {
+
     .card {
         width: 95%;
+        padding: 10px;
     }
-}
 
-th, td {
-    padding: 12px;
-    text-align: center;
+    input[type="text"] {
+        width: 90%;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        background: white;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    }
+
+    td {
+        text-align: left;
+        padding: 8px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    td::before {
+        font-weight: bold;
+    }
+
+    td:nth-child(1)::before { content: "Item"; }
+    td:nth-child(2)::before { content: "R.T"; }
+    td:nth-child(3)::before { content: "W.P"; }
 }
